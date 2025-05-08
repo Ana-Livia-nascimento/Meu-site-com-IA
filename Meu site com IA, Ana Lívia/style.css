@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    background: linear-gradient(135deg, #ffe6f0, #e6f7ff, #fffde7);
+    color: #444;
+    line-height: 1.6;
+    padding: 20px;
+    animation: fundoAnimado 15s ease infinite alternate;
+}
+
+@keyframes fundoAnimado {
+    0% { background: linear-gradient(135deg, #ffe6f0, #e6f7ff); }
+    50% { background: linear-gradient(135deg, #fffde7, #ffe6f0); }
+    100% { background: linear-gradient(135deg, #e6f7ff, #ffe6f0); }
+}
+
+header {
+    text-align: center;
+    position: relative;
+    padding: 60px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff99cc, #ffb3e6);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    overflow: hidden;
+    animation: bounceInDown 1s ease-out;
+}
+
+.laco {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.laco:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.laco-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.laco-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #d63384;
+    margin-bottom: 10px;
+    border-left: 5px solid #ff66b2;
+    padding-left: 10px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    background: url('https://i.imgur.com/6lZb0cB.png') no-repeat left center;
+    background-size: 18px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+button {
+    background-image: linear-gradient(to right, #ff66b2, #ff99cc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #e0338a, #ff66b2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 102, 178, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffd6ec;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 30px;
+}
+
+/* Animações */
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
